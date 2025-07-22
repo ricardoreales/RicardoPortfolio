@@ -3,11 +3,10 @@
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import { Navbar } from './Navbar'
-import { HeroSection } from './HeroSection'
 import { ClientSection } from './ClientSection'
 import { ServicesSection } from './ServicesSection'
 import { CTASection } from './CTASection'
-import { ModernCarousel } from './ModernCarousel'
+import SwiperCarousel from './SwiperCarousel'
 import { PricingSection } from './PricingSection'
 import { FormSection } from './FormSection'
 import { TeamSection } from './TeamSection'
@@ -55,7 +54,7 @@ export default function Landing() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white overflow-x-hidden">
+   <>
       {/* Background parallax element */}
       <motion.div 
         className="fixed inset-0 z-0 opacity-10"
@@ -92,9 +91,9 @@ export default function Landing() {
           <CTASection />
         </AnimatedSection>
 
-        {/* Modern Carousel Section */}
+        {/* Swiper Carousel Section */}
         <AnimatedSection>
-          <ModernCarousel />
+          <SwiperCarousel />
         </AnimatedSection>
 
         {/* Pricing Section */}
@@ -117,7 +116,7 @@ export default function Landing() {
           <FooterSection />
         </AnimatedSection>
       </motion.div>
-    </div>
+    </>
   )
 }
 
