@@ -3,7 +3,7 @@ import "./GlassContainer.css";
 
 export const GlassContainer = ({ children  ,className}: { children: React.ReactNode ,className?: string}) => {
   return (
-    <div className="GlassContainer hidden">
+    <div className="GlassContainer ">
       <div className={`GlassContent ${className}`}>{children}</div>
       <div className="GlassMaterial">
         <div className="GlassEdgeReflection"></div>

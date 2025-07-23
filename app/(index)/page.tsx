@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      <div className="min-h-screen relative bg-[#1a1a1a] text-white overflow-x-hidden">
+      <div className="min-h-screen relative bg-[#1a1a1a] text-white overflow-x-hidden z-0">
         <Hero />
       </div>
       <div className="h-screen bg-black">
