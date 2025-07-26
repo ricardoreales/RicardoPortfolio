@@ -4,10 +4,10 @@ import { GlassContainer } from "../GlassContainer";
 
 export const Header = () => {
   return (
-    <header className="fixed z-50 top-10 left-0 w-full flex justify-center items-center">
+    <header className="fixed bg-primary-50 z-50 top-10 left-0 w-full flex justify-center items-center">
   
-      <nav className="">
-        <GlassContainer className="py-5 brightness-200">
+      <nav className="nav-glass-container  h-10 flex items-center justify-center !shadow-lg !shadow-white/5 text-white gap-2">
+        
           <Link className="ml-20  my-2" href="/#home">
             Home
           </Link>
@@ -19,7 +19,7 @@ export const Header = () => {
           <Link className="my-2 mr-20" href="/#pricing">
             Pricing
           </Link>
-        </GlassContainer>
+
       </nav>
     </header>
   );
