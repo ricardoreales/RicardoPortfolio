@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { GlassContainer } from "../GlassContainer";
 
 export const Header = () => {
   return (
