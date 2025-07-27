@@ -10,8 +10,9 @@ export function Hero() {
         <div className="container flex-col flex lg:flex-row md:max-lg:gap-y-8  w-full items-center md:justify-between mx-auto">
         <div className=" animation-entrance-left">
           <PresentationText />
+          <div className="h-20"></div>
         </div>
-        <div className="hero-right ">
+        <div className=" ">
           <HeroSkills />
         </div>
         </div>
