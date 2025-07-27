@@ -1,14 +1,19 @@
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/main-page/Hero/Hero";
 import "./main-page.css";
+import AppleGallery from "@/components/AppleGallery";
 export default function Home() {
   return (
-    <div className="">
+    <>
       <Header />
       <div className="min-h-screen relative bg-[#1a1a1a] text-white overflow-x-hidden z-0">
         <Hero />
+       
       </div>
-  
-    </div>
+   <AppleGallery />
+   <div className="h-screen bg-red-500">
+    dasdsa
+   </div>
+    </>
   );
 }
