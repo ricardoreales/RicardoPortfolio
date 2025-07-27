@@ -3,7 +3,7 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <header className="fixed bg-primary-50 z-50 top-10 left-0 w-full flex justify-center items-center">
+    <header className="fixed  z-50 top-10 left-0 w-full flex justify-center items-center">
   
       <nav className="nav-glass-container  h-10 flex items-center justify-center !shadow-lg !shadow-white/5 text-white gap-2">
         
