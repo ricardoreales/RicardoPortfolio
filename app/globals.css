@@ -28,6 +28,38 @@
   --color-success-700: hsla(142, 76%, 26%, 1);
   --color-success-800: hsla(142, 76%, 20%, 1);
   --color-success-900: hsla(142, 77%, 15%, 1);
+
+  --animate-entrance-top: entrance-top 1s ease-out forwards;
+
+  --animate-entrance-left: entrance-left 1s ease-out forwards;
+
+  --animate-entrance-right: entrance-right 1s ease-out forwards;
+
+  @keyframes entrance-top {
+    0%,
+    100% {
+      transform: translateY(-100dvh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes entrance-left {
+    0% {
+      transform: translateX(-100dvw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes entrance-right {
+    0% {
+      transform: translateX(100dvw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 @theme inline {
   --color-background: var(--background);
@@ -138,7 +170,6 @@
   --sidebar-ring: oklch(0.553 0.013 58.071);
 }
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -152,8 +183,6 @@
   .font-title {
     font-family: var(--font-title);
   }
-
-
 
   /* .rick-bar {
     @apply rounded-full;
@@ -183,46 +212,24 @@
   } */
 }
 
-  .animation-video-entrance-left {
-    transform: translateX(-100dvw);
-  }
-  .animation-video-entrance-right {
-    transform: translateX(100dvw);
-  }
-  .loaded-intro .animation-video-entrance-left {
-    transform: translateX(0);
-    animation-name: animation-video-entrance-left;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-name: animation-video-entrance-left;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-  }
+.animation-entrance-left {
+  transform: translateX(-100dvw);
+}
 
-  .loaded-intro .animation-video-entrance-right {
+.animation-entrance-right {
+  transform: translateX(100dvw);
+}
 
-    animation-name: animation-video-entrance-right;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-name: animation-video-entrance-right;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-  }
-  @keyframes animation-video-entrance-left {
-    0% {
-      transform: translateX(-100dvw);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  @keyframes animation-video-entrance-right {
-    0% {
-      transform: translateX(100dvw);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
+.animation-entrance-top {
+  transform: translateY(-100dvh);
+}
+.loaded-intro .animation-entrance-top {
+  @apply animate-entrance-top;
+}
+.loaded-intro .animation-entrance-left {
+  @apply animate-entrance-left;
+}
+
+.loaded-intro .animation-entrance-right {
+  @apply animate-entrance-right;
+}
