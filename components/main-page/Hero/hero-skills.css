@@ -2,7 +2,7 @@
 
 .skill-glass-container {
   @apply max-sm:hidden;
-  @apply mr-[20px] md:mr-[100px];
+  @apply mr-[20px] ;
   .skill {
     transform: translateX(100dvw);
     display: flex;

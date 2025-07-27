@@ -15,9 +15,9 @@ export const VideoIntro = () => {
       <div
         className={cn(
           "absolute top-0 left-0 right-0 bottom-0 w-full h-full z-10",
-          "sm:bg-gradient-to-l sm:from-black/100 sm:via-transparent sm:to-black/100",
+          " max-sm:from-black/70 max-sm:to-black/70",
+          "bg-gradient-to-l from-black/100 via-transparent to-black/100",
           "xl:bg-gradient-to-l xl:from-black/100 xl:from-20% xl:via-transparent xl:to-black/100 xl:to-80%",
-       
         )}
       />
       <div className="video-intro-out absolute top-0 sm:left-0 right-0 bottom-0 ">
