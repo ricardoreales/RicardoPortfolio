@@ -1,10 +1,16 @@
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
-import { Kalnia, Poppins } from "next/font/google";
+import { Kalnia, Poppins,Figtree } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700","800","900"],
   variable: "--font-default",
+});
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700","800","900"],
+  variable: "--font-skills",
 });
 
 
@@ -17,6 +23,7 @@ const kalnia = Kalnia({
 const fonts = {
   title: kalnia,
   default: poppins,
+  skills: figtree,
   
 } satisfies Record<string,NextFontWithVariable>
 

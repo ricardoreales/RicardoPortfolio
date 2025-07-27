@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer components {
+  .skill-transparent {
+    border-radius: 50px;
+    border: 0.5px solid rgba(255, 255, 255, 1);
+    @apply brightness-70 backdrop-blur-xs;
+  }
+  .skill-blur {
+    background: linear-gradient(
+        86deg,
+        rgba(255, 255, 255, 0.2) 11.14%,
+        rgba(255, 255, 255, 0.05) 113.29%
+      )
+      border-box;
+    border-radius: 50px; /*1*/
+    border: 2px solid transparent; /*2*/
+
+    mask: /*4*/ linear-gradient(rgba(255, 255, 255, 0) 0 0) padding-box,
+      linear-gradient(rgba(255, 255, 255, 1) 0 0);
+    mask-composite: exclude; /*5*/
+
+    filter: brightness(0.65);
+    background-blend-mode: overlay;
+    box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.15),
+      10px 10px 20px 0px rgba(255, 255, 255, 0.45) inset;
+    backdrop-filter: blur(10px);
+  }
+}

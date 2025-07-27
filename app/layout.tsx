@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fonts.title.variable} ${fonts.default.variable}  ${fonts.default.className} antialiased`}
+        className={`${fonts.title.variable} ${fonts.default.variable}  ${fonts.default.className} ${fonts.skills.variable} antialiased`}
       >
         {children}
       </body>
