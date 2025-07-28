@@ -213,6 +213,28 @@
       10px 10px 20px 0px rgba(255, 255, 255, 0.45) inset;
     backdrop-filter: blur(10px);
   }
+  .loaded-intro .video-intro-out {
+    animation: video-out 0.5s ease-in-out forwards;
+  }
+  
+  
+  
+  /* .loaded-intro .video-intro {
+    animation: video-intro-out 1s ease-in-out forwards;
+  
+  } */
+
+  
+  @keyframes video-out {
+    0% {
+      opacity: 1;
+      filter: blur(0px) brightness(2);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(10px), brightness(0.5);
+    }
+  }
 }
 
 .animation-entrance-left {
@@ -236,3 +258,10 @@
 .loaded-intro .animation-entrance-right {
   @apply animate-entrance-right;
 }
+
+.hidden-without-video{
+  display: none;
+ }
+ .loaded-intro .hidden-without-video{
+  display: initial;
+ }

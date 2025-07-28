@@ -1,7 +1,7 @@
 import { CollaboratorsCarrusel } from "@/components/main-page/CollaboratorsCarrusel";
 import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/main-page/Hero/Hero";
-import "./main-page.css";
+
 export default function Home() {
   return (
     <>

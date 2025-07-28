@@ -3,7 +3,7 @@
     @apply w-full ;
     margin: auto;
   
-    --slide-spacing:max(3dvw, 50px);
+    --slide-spacing:max(2.5dvw, 40px);
     
   }
   .embla__viewport {
