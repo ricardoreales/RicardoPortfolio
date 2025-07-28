@@ -15,6 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="video"
+          href="/videos/intro.mp4"
+          type="video/mp4"
+        />
+      </head>
       <body
         className={`${fonts.title.variable} ${fonts.default.variable}  ${fonts.default.className} ${fonts.skills.variable} antialiased`}
       >

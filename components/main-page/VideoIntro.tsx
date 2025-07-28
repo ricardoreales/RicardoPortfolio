@@ -7,12 +7,12 @@ export const VideoIntro = () => {
   return (
     <>
       <Image
-        src="/images/hero-bg.png"
+        src="/images/hero-bg.webp"
         width={100}
         height={100}
         unoptimized
         alt=""
-        className="w-auto  object-cover object-[46.5%_0%] h-screen mx-auto"
+        className="w-auto  object-cover object-[46.5%_0%] h-screen mx-auto "
       />
 
       <div
@@ -25,6 +25,7 @@ export const VideoIntro = () => {
       />
       <div className="video-intro-out absolute top-0 sm:left-0 right-0 bottom-0 ">
         <video
+        
           onEnded={() => {
             document.body.classList.add("loaded-intro");
           }}
