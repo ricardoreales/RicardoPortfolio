@@ -1,5 +1,5 @@
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
-import { Kalnia, Poppins,Figtree } from "next/font/google";
+import { Kalnia, Poppins,Figtree, Doppio_One } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,10 +20,16 @@ const kalnia = Kalnia({
   subsets: ["latin"],
 });
 
+const sectionTitle = Doppio_One({
+  variable: "--font-section-title",
+  weight: ["400"],
+  subsets: ["latin"],
+});
 const fonts = {
   title: kalnia,
   default: poppins,
   skills: figtree,
+  sectionTitle,
   
 } satisfies Record<string,NextFontWithVariable>
 

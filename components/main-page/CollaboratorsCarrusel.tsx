@@ -38,17 +38,31 @@ const collaborators = [
 ];
 
 export const CollaboratorsCarrusel = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true }, [AutoScroll({active: true,stopOnInteraction: false,startDelay: 0,stopOnMouseEnter: true})]);
+  const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true }, [
+    AutoScroll({
+      active: true,
+      stopOnInteraction: false,
+      startDelay: 0,
+      stopOnMouseEnter: true,
+    }),
+  ]);
 
   return (
-    <div className="max-w-screen-7xl mx-auto flex justify-center items-center hidden-without-video">
-      <div className="embla bg-basic-700">
+    <div className="max-w-[96rem] mx-auto  flex justify-center items-center hidden-without-video">
+      <div className="relative embla bg-basic-700">
+        <div
+          className="absolute top-0 left-0 right-0 bottom-0  pointer-events-none z-10
+  bg-radial to-basic-700 to-65% lg:to-60%    from-transparent  w-full 
+
+        "
+        />
+
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             {Array.from({ length: 3 }).map((_, index1) => (
               <Fragment key={index1}>
                 {collaborators.map((collaborator, index) => (
-                  <div className="embla__slide py-4 pt-8" key={index}>
+                  <div className="embla__slide py-[50px] " key={index}>
                     <Image
                       src={collaborator.image}
                       alt={collaborator.name}

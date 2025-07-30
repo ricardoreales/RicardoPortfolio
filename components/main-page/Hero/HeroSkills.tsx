@@ -4,7 +4,7 @@ import fonts from "@/config/fonts";
 import { cn } from "../../../lib/utils";
 export const HeroSkills = () => {
   return (
-    <div className="relative lg:scale-75 lg:w-[440px] 2xl:w-auto xl:scale-100 md:origin-center lg:origin-right hidden md:flex flex-col justify-center items-center animation-entrance-right  max-sm:hidden md ">
+    <div className="relative lg:scale-75 lg:w-[440px] 2xl:w-auto xl:scale-100 md:origin-center lg:origin-right hidden lg:flex flex-col justify-center items-center animation-entrance-right  max-sm:hidden md ">
       <Skill
         className={cn("  bg-white/60 text-black brightness-90", "w-[220px] ",
            

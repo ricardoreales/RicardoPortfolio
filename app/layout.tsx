@@ -13,6 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fonstsIncludes = Object.values(fonts).map((font) => font.variable).join(" ");
   return (
     <html lang="en">
       <head>
@@ -24,7 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${fonts.title.variable} ${fonts.default.variable}  ${fonts.default.className} ${fonts.skills.variable} antialiased`}
+        className={`${fonstsIncludes} antialiased`}
       >
         {children}
       </body>
