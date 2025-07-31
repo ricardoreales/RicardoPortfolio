@@ -1,44 +1,65 @@
 "use client";
-import Cima from "@/assets/images/Cima.svg";
-import EZ from "@/assets/images/EZ.svg";
-import Gema from "@/assets/images/Gema.svg";
-import HR from "@/assets/images/HR.svg";
-import Impulsa from "@/assets/images/Impulsa.svg";
-import Mobilifarma from "@/assets/images/Mobilifarma.svg";
+import Adobe from "@/assets/images/technologies/LogoAdobe.svg";
+import CSS from "@/assets/images/technologies/LogoCSS.svg";
+import Figma from "@/assets/images/technologies/LogoFigma.svg";
+import GitHub from "@/assets/images/technologies/LogoGitHub.svg";
+import Illustrator from "@/assets/images/technologies/LogoIllustrator.svg";
+import HTML from "@/assets/images/technologies/LogoHTML.svg";
+import Maze from "@/assets/images/technologies/LogoMaze.svg";
+import Optimal from "@/assets/images/technologies/LogoOptimal.svg";
+import Photoshop from "@/assets/images/technologies/LogoPhotoshop.svg";
+import Slack from "@/assets/images/technologies/LogoSlack.svg";
 import AutoScroll from "embla-carousel-auto-scroll";
 import useEmblaCarousel, { EmblaViewportRefType } from "embla-carousel-react";
 import Image from "next/image";
 import { Fragment } from "react";
 
 import { cn } from "@/lib/utils";
-const collaborators = [
+const technologies = [
   {
-    name: "Mobilifarma",
-    image: Mobilifarma,
+    name: "Adobe",
+    image: Adobe,
   },
   {
-    name: "Cima",
-    image: Cima,
+    name: "CSS",
+    image: CSS,
   },
   {
-    name: "EZ Script",
-    image: EZ,
+    name: "Figma",
+    image: Figma,
   },
   {
-    name: "Impulsa",
-    image: Impulsa,
+    name: "GitHub",
+    image: GitHub,
   },
   {
-    name: "Heyscar Recode",
-    image: HR,
+    name: "Illustrator",
+    image: Illustrator,
   },
   {
-    name: "Gema",
-    image: Gema,
+    name: "HTML",
+    image: HTML,
   },
-];
+  {
+    name: "Maze",
+    image: Maze,
+  },
+  
+  {
+    name: "Optimal",
+    image: Optimal,
+  },
+  {
+    name: "Photoshop",
+    image: Photoshop,
+  },
+  {
+    name: "Slack",
+    image: Slack,
+  },
+  ];
 
-export const CollaboratorsCarrusel = () => {
+export const TechnologiesCarrusel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true, dragFree: true }, [
     AutoScroll({
       active: true,
@@ -61,14 +82,14 @@ export const CollaboratorsCarrusel = () => {
           <CarruselContainer ref={emblaRef}>
             {Array.from({ length: 3 }).map((_, index1) => (
               <Fragment key={index1}>
-                {collaborators.map((collaborator, index) => (
+                {technologies.map((technology, index) => (
                   <CarruselItem key={index}>
                     <Image
-                      src={collaborator.image}
-                      alt={collaborator.name}
+                      src={technology.image}
+                      alt={technology.name}
                       width={100}
                       height={100}
-                      className=" h-[80px] w-auto opacity-40   object-contain"
+                      className=" h-[40px] w-auto opacity-40   object-contain"
                       unoptimized
                     />
                   </CarruselItem>
