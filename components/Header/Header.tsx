@@ -4,7 +4,7 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <header className="fixed  z-50 top-10 left-0 w-full flex justify-center items-center animation-entrance-top ">
+    <header className="fixed fade-in  z-50 top-4 left-0 w-full flex justify-center items-center animation-entrance-top ">
       <nav className=" relative container  min-h-10 flex items-center justify-between text-white py-3 px-3 mx-2 sm:mx-4 lg:mx-auto">
         <div className="nav-glass-background w-full h-full absolute top-0 left-0 -z-10" />
         <span className="ml-10">Ricardo</span>

@@ -89,7 +89,7 @@ export const TechnologiesCarrusel = () => {
                       alt={technology.name}
                       width={100}
                       height={100}
-                      className=" h-[40px] w-auto opacity-40   object-contain"
+                      className=" h-[46px] w-auto opacity-40   object-contain"
                       unoptimized
                     />
                   </CarruselItem>
