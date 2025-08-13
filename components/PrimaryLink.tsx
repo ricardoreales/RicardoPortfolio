@@ -5,13 +5,13 @@ import React from "react";
 
 interface PrimarybuttonProps extends LinkProps {
   children: React.ReactNode;
-  variant: "header";
+  variant: "header" | "default";
   className?: string;
 }
 
 export const PrimaryLink = ({
   children,
-  variant = "header",
+  variant = "default",
   href,
   className,
   ...props
@@ -23,7 +23,10 @@ export const PrimaryLink = ({
       className={cn(
         "bg-primary-500 text-white  font-extrabold tracking-wide gap-4  flex items-center justify-center   rounded-full",
         {
-          "min-h-12   gap-4 text-base  2xl:text-xl  p-3 pl-8 pr-4 ": variant === "header",
+          "min-h-12   gap-4 text-base  2xl:text-xl  p-3 pl-8 pr-4 ":
+            variant === "header",
+          "min-h-10   gap-4 text-base  2xl:text-xl  p-3 pl-8 pr-4 w-fit ":
+            variant === "default",
         },
         className
       )}

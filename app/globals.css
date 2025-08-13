@@ -238,7 +238,7 @@
     @apply  mx-auto;
   }
   .rr-section {
-    @apply px-[16px] mx-auto md:px-[32px] lg:px-[80px] bg-basic-700 grid grid-cols-1 lg:grid-cols-2 gap-4 py-[50px] md:py-[100px] lg:py-[100px] max-w-[96rem];
+    @apply px-[16px] mx-auto md:px-[32px] lg:px-[80px] bg-basic-700 grid grid-cols-1 lg:grid-cols-2 gap-0 py-[50px] md:py-[100px] lg:py-[100px] max-w-[96rem];
 
     .rr-section-text {
       @apply flex flex-col gap-[20px]  ;

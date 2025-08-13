@@ -1,3 +1,4 @@
+import { PrimaryLink } from "@/components/PrimaryLink";
 import fonts from "@/config/fonts";
 import { cn } from "@/lib/utils";
 import { BaggageClaim, Brush, LucideIcon, Search } from "lucide-react";
@@ -5,7 +6,7 @@ import { BaggageClaim, Brush, LucideIcon, Search } from "lucide-react";
 export const PresentationSection = () => {
   return (
     <section className="rr-section">
-      <div className="rr-section-text">
+      <div className="rr-section-text ">
         <h4 className="rr-title">What I Do</h4>
         <p className="rr-description ">
           From research to implementation, I turn ideas into digital products
@@ -15,7 +16,7 @@ export const PresentationSection = () => {
         </p>
       </div>
       <div className="flex flex-col "></div>
-      <div className="col-span-full py-[40px]  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="col-span-full py-[40px]  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
         <Card
           Icon={Search}
           title="Discover & Research"
@@ -32,6 +33,11 @@ export const PresentationSection = () => {
           title="Refine & Deliver"
           description="Rigorous testing, iteration, and polishing ensure coherent, scalable experiences ready for launch."
         />
+      </div>
+      <div className="flex flex-col gap-4 col-span-full justify-center items-center">
+        <PrimaryLink href="/" variant="default">
+          Contact me
+        </PrimaryLink>
       </div>
     </section>
   );
