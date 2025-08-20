@@ -4,6 +4,9 @@ import { Hero } from "@/components/main-page/Hero/Hero";
 import { PresentationSection } from "@/components/main-page/PresentationSection.tsx/PresentationSection";
 import { TechnologiesCarrusel } from "@/components/main-page/TechnologiesCarrusel";
 import { TheHumanSection } from "@/components/main-page/PresentationSection.tsx/TheHumanSection";
+import { FeaturedProjectsSection } from "@/components/main-page/FeaturedProjects/FeaturedProjectsSection";
+import { CTASection } from "@/components/main-page/CTASection";
+import { Footer } from "@/components/main-page/Footer";
 
 export default function Home() {
   return (
@@ -18,8 +21,13 @@ export default function Home() {
         <PresentationSection />
 
         <TheHumanSection />
+
         <TechnologiesCarrusel />
+
+        <FeaturedProjectsSection />
+        <Footer />
       </div>
+   
     </>
   );
 }

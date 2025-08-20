@@ -15,6 +15,8 @@ import Image from "next/image";
 import { Fragment } from "react";
 
 import { cn } from "@/lib/utils";
+import { CarruselContainer } from "../carousel/CarouselContainer";
+import { CarruselItem } from "../carousel/CarouselItem";
 const technologies = [
   {
     name: "Adobe",
@@ -100,40 +102,5 @@ export const TechnologiesCarrusel = () => {
         </div>
       </div>
     
-  );
-};
-const CarruselContainer = ({
-  ref,
-  children,
-}: {
-  ref: EmblaViewportRefType;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div ref={ref} className="overflow-hidden">
-      <div
-        className="flex touch-pan-y pinch-zoom "
-        style={{
-          marginLeft: "calc(max(2.5dvw, 40px) * -1)",
-        }}
-      >
-        {children}
-      </div>
-    </div>
-  );
-};
-const CarruselItem = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div
-      style={{
-        transform: "translate3d(0, 0, 0)",
-        flex: "0 0 auto",
-        minWidth: "0px",
-        paddingLeft: "max(2.5dvw, 40px)",
-      }}
-      className="  py-[50px] "
-    >
-      {children}
-    </div>
   );
 };
