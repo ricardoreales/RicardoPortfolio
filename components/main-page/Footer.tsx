@@ -12,9 +12,9 @@ import { BehanceIcon } from "../svgs/BehanceIcon";
 export const Footer = () => {
   return (
     <div className="rr-section gap-y-[100px]">
-      <div className=" flex justify-center gap-[100px]  col-span-2">
-        <div className=" max-w-[400px] flex flex-col gap-[20px]">
-          <div className="flex items-center gap-2 text-white ">
+      <div className=" grid grid-cols-2 lg:grid-cols-[1fr_auto_auto] gap-y-[100px]  lg:gap-[100px]  col-span-2">
+        <div className=" max-w-fullsm:max-w-[400px] max-lg:col-span-2 flex  flex-col gap-[20px]">
+          <div className="flex items-center justify-center lg:justify-start gap-2 text-white ">
             <LogoR />
             <p
               className={cn(
@@ -27,12 +27,12 @@ export const Footer = () => {
           </div>
           <p
             className={cn(
-              " font-bold text-[24px] leading-normal  text-white  "
+              " font-bold text-[24px] leading-normal  text-white text-center lg:text-left"
             )}
           >
             UI/UX product Designer based in Argentina
           </p>
-          <span className="text-white text-sm opacity-[0.6]">
+          <span className="text-white text-sm opacity-[0.6] text-center lg:text-left">
             © 2025 Copyright
           </span>
         </div>
@@ -100,7 +100,7 @@ const MenuItems = ({
   title: string;
 }) => {
   return (
-    <ul className=" min-w-[200px] gap-y-[20px] flex flex-col">
+    <ul className=" sm:min-w-[200px] gap-y-[20px] flex flex-col text-center lg:text-left  items-center lg:items-start ">
       <li className="text-white text-[24px] leading-normal  font-bold ">
         {title}
       </li>
@@ -110,7 +110,7 @@ const MenuItems = ({
           className="text-white text-sm opacity-[0.6] text-[20px] leading-normal font-light"
         >
           <Link 
-          target="_blank"
+          
           href={option.href} className="flex items-center gap-2">
             {option.icon}
           {option.name}</Link>

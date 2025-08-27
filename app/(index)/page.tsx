@@ -25,9 +25,9 @@ export default function Home() {
         <TechnologiesCarrusel />
 
         <FeaturedProjectsSection />
+        <CTASection />
         <Footer />
       </div>
-   
     </>
   );
 }
