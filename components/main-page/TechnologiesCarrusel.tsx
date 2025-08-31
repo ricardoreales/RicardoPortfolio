@@ -14,7 +14,6 @@ import useEmblaCarousel, { EmblaViewportRefType } from "embla-carousel-react"
 import Image from "next/image"
 import { Fragment } from "react"
 
-
 import { cn } from "@/lib/utils"
 import { CarruselContainer } from "../carousel/CarouselContainer"
 import { CarruselItem } from "../carousel/CarouselItem"
