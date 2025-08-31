@@ -1,4 +1,4 @@
-import { EmblaCarouselType } from "embla-carousel-react"
+import { EmblaViewportRefType } from "embla-carousel-react"
 
 export interface ScrollControlledCarouselConfig {
   itemsCount: number
@@ -8,7 +8,7 @@ export interface ScrollControlledCarouselConfig {
 
 export interface ScrollControlledCarouselReturn {
   sectionRef: React.RefObject<HTMLElement>
-  setEmblaApi: (emblaApi: EmblaCarouselType | null) => void
+  setEmblaApi: (emblaApi: EmblaViewportRefType | null) => void
   isScrollLocked: boolean
   currentSlide: number
   isCarouselActive: boolean
