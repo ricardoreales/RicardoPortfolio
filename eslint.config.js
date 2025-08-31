@@ -42,6 +42,7 @@ export default tseslint.config([
     },
     rules: {
       "prettier/prettier": "error",
+      "@typescript-eslint/no-unused-vars": "error",
       "import/no-unresolved": "error",
       "import/no-cycle": "error",
       "import/no-unused-modules": "error",
