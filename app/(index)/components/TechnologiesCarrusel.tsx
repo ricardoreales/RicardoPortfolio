@@ -15,8 +15,8 @@ import Image from "next/image"
 import { Fragment } from "react"
 
 import { cn } from "@/lib/utils"
-import { CarruselContainer } from "../carousel/CarouselContainer"
-import { CarruselItem } from "../carousel/CarouselItem"
+import { CarruselContainer } from "../../../components/carousel/CarouselContainer"
+import { CarruselItem } from "../../../components/carousel/CarouselItem"
 const technologies = [
   {
     name: "Adobe",

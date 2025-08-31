@@ -1,4 +1,4 @@
-import { PrimaryLink } from "../../PrimaryLink"
+import { PrimaryLink } from "../../../../components/PrimaryLink"
 
 export const PresentationText = () => {
   return (

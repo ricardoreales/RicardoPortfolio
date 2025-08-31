@@ -1,7 +1,7 @@
 "use client"
 import ctaBg from "@/assets/CTASection.webp"
-import { SectionTitle } from "../SectionTitle"
-import { PrimaryLink } from "../PrimaryLink"
+import { SectionTitle } from "../../../components/SectionTitle"
+import { PrimaryLink } from "../../../components/PrimaryLink"
 export const CTASection = () => {
   return (
     <section

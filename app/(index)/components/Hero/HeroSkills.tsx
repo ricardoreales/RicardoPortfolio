@@ -1,7 +1,7 @@
 import React from "react"
 import "./skill.css"
 import fonts from "@/config/fonts"
-import { cn } from "../../../lib/utils"
+import { cn } from "../../../../lib/utils"
 export const HeroSkills = () => {
   return (
     <div className="animation-entrance-right md relative hidden flex-col items-center justify-center max-sm:hidden md:origin-center lg:flex lg:w-[440px] lg:origin-right lg:scale-75 xl:scale-100 2xl:w-auto">
