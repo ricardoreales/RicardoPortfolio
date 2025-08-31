@@ -1,15 +1,15 @@
-import { Phone } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { Phone } from "lucide-react"
+import Link from "next/link"
+import React from "react"
 
 export const Header = () => {
   return (
-    <header className="fixed fade-in  z-50 top-4 left-0 w-full flex justify-center items-center animation-entrance-top ">
-      <nav className=" relative container  min-h-10 flex items-center justify-between text-white py-3 px-3 mx-2 sm:mx-4 lg:mx-auto">
-        <div className="nav-glass-background w-full h-full absolute top-0 left-0 -z-10" />
+    <header className="fade-in animation-entrance-top fixed top-4 left-0 z-50 flex w-full items-center justify-center">
+      <nav className="relative container mx-2 flex min-h-10 items-center justify-between px-3 py-3 text-white sm:mx-4 lg:mx-auto">
+        <div className="nav-glass-background absolute top-0 left-0 -z-10 h-full w-full" />
         <span className="ml-10">Ricardo</span>
-        <div className="font-bold text-sm gap-x-4 flex items-center [&>a]:hover:text-primary-500 [&>a]:hover:scale-105 [&>a]:hover:underline transition-all duration-300">
-          <Link className="  my-2" href="/#home">
+        <div className="[&>a]:hover:text-primary-500 flex items-center gap-x-4 text-sm font-bold transition-all duration-300 [&>a]:hover:scale-105 [&>a]:hover:underline">
+          <Link className="my-2" href="/#home">
             Home
           </Link>
 
@@ -20,11 +20,11 @@ export const Header = () => {
           <Link className="my-2" href="/#pricing">
             Pricing
           </Link>
-          <button className="bg-primary-500 text-white p-0 w-9 h-9 rounded-full flex items-center justify-center hover:bg-primary-600 transition-all duration-300">
-           <Phone  className="w-4 h-4 fill-white" />
+          <button className="bg-primary-500 hover:bg-primary-600 flex h-9 w-9 items-center justify-center rounded-full p-0 text-white transition-all duration-300">
+            <Phone className="h-4 w-4 fill-white" />
           </button>
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}

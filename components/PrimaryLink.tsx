@@ -1,12 +1,12 @@
-import { cn } from "@/lib/utils";
-import { ArrowRightIcon } from "lucide-react";
-import Link, { LinkProps } from "next/link";
-import React from "react";
+import { cn } from "@/lib/utils"
+import { ArrowRightIcon } from "lucide-react"
+import Link, { LinkProps } from "next/link"
+import React from "react"
 
 interface PrimarybuttonProps extends LinkProps {
-  children: React.ReactNode;
-  variant: "header" | "default";
-  className?: string;
+  children: React.ReactNode
+  variant: "header" | "default"
+  className?: string
 }
 
 export const PrimaryLink = ({
@@ -21,11 +21,11 @@ export const PrimaryLink = ({
       href={href}
       {...props}
       className={cn(
-        "bg-primary-500 text-white  font-extrabold tracking-wide gap-4  flex items-center justify-center   rounded-full",
+        "bg-primary-500 flex items-center justify-center gap-4 rounded-full font-extrabold tracking-wide text-white",
         {
-          "min-h-12   gap-4 text-base  2xl:text-xl  p-3 pl-8 pr-4 ":
+          "min-h-12 gap-4 p-3 pr-4 pl-8 text-base 2xl:text-xl":
             variant === "header",
-          "min-h-10   gap-4 text-base  2xl:text-xl  p-3 pl-8 pr-4 w-fit ":
+          "min-h-10 w-fit gap-4 p-3 pr-4 pl-8 text-base 2xl:text-xl":
             variant === "default",
         },
         className
@@ -34,14 +34,14 @@ export const PrimaryLink = ({
       {children}
       <div
         className={cn(
-          " bg-white rounded-full flex items-center justify-center",
+          "flex items-center justify-center rounded-full bg-white",
           {
-            "w-8 h-8 2xl:w-10 2xl:h-10 p-1": variant === "header",
+            "h-8 w-8 p-1 2xl:h-10 2xl:w-10": variant === "header",
           }
         )}
       >
-        <ArrowRightIcon className=" text-primary-500" />
+        <ArrowRightIcon className="text-primary-500" />
       </div>
     </Link>
-  );
-};
+  )
+}

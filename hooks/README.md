@@ -15,14 +15,14 @@ Hook personalizado para controlar un carousel mediante scroll. Cuando el usuario
 ### Uso
 
 ```tsx
-import { useScrollControlledCarousel } from "@/hooks/useScrollControlledCarousel";
-import useEmblaCarousel from "embla-carousel-react";
+import { useScrollControlledCarousel } from "@/hooks/useScrollControlledCarousel"
+import useEmblaCarousel from "embla-carousel-react"
 
 const MyCarouselComponent = ({ data }: { data: any[] }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     dragFree: false,
-  });
+  })
 
   const {
     sectionRef,
@@ -34,12 +34,12 @@ const MyCarouselComponent = ({ data }: { data: any[] }) => {
     itemsCount: data.length,
     autoScrollDuration: 1200, // Tiempo entre slides en ms
     threshold: 0.3, // Porcentaje de la sección visible para activar
-  });
+  })
 
   // Conectar embla API con el hook
   useEffect(() => {
-    setEmblaApi(emblaApi);
-  }, [emblaApi, setEmblaApi]);
+    setEmblaApi(emblaApi)
+  }, [emblaApi, setEmblaApi])
 
   return (
     <section ref={sectionRef}>
@@ -49,30 +49,30 @@ const MyCarouselComponent = ({ data }: { data: any[] }) => {
           {currentSlide + 1} / {data.length}
         </div>
       )}
-      
+
       {/* Tu carousel aquí */}
     </section>
-  );
-};
+  )
+}
 ```
 
 ### Parámetros
 
-| Parámetro | Tipo | Default | Descripción |
-|-----------|------|---------|-------------|
-| `itemsCount` | `number` | - | Número total de slides en el carousel |
-| `autoScrollDuration` | `number` | `1000` | Duración en milisegundos entre cada slide |
-| `threshold` | `number` | `0.1` | Porcentaje de la sección visible para activar el carousel |
+| Parámetro            | Tipo     | Default | Descripción                                               |
+| -------------------- | -------- | ------- | --------------------------------------------------------- |
+| `itemsCount`         | `number` | -       | Número total de slides en el carousel                     |
+| `autoScrollDuration` | `number` | `1000`  | Duración en milisegundos entre cada slide                 |
+| `threshold`          | `number` | `0.1`   | Porcentaje de la sección visible para activar el carousel |
 
 ### Retorno
 
-| Propiedad | Tipo | Descripción |
-|-----------|------|-------------|
-| `sectionRef` | `RefObject<HTMLElement>` | Ref para el elemento section contenedor |
-| `setEmblaApi` | `Function` | Función para establecer la API de Embla |
-| `isScrollLocked` | `boolean` | Indica si el scroll está bloqueado |
-| `currentSlide` | `number` | Índice del slide actual |
-| `isCarouselActive` | `boolean` | Indica si el carousel está activo |
+| Propiedad          | Tipo                     | Descripción                             |
+| ------------------ | ------------------------ | --------------------------------------- |
+| `sectionRef`       | `RefObject<HTMLElement>` | Ref para el elemento section contenedor |
+| `setEmblaApi`      | `Function`               | Función para establecer la API de Embla |
+| `isScrollLocked`   | `boolean`                | Indica si el scroll está bloqueado      |
+| `currentSlide`     | `number`                 | Índice del slide actual                 |
+| `isCarouselActive` | `boolean`                | Indica si el carousel está activo       |
 
 ### Notas de Implementación
 

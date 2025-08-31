@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export const LogoR = () => {
   return (
@@ -85,5 +85,5 @@ export const LogoR = () => {
         </linearGradient>
       </defs>
     </svg>
-  );
-};
+  )
+}

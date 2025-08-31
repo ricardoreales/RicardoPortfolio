@@ -1,24 +1,24 @@
-import React from "react";
-import FooterRicardoImg from "@/assets/images/FooterRicardo.png";
-import Image from "next/image";
-import { LogoR } from "../svgs/LogoR";
-import { cn } from "@/lib/utils";
-import fonts from "@/config/fonts";
-import Link from "next/link";
-import { WhatsIcon } from "../svgs/WhatsappIcon";
-import { LinkedinIcon } from "../svgs/LinkedInIcon";
-import { BehanceIcon } from "../svgs/BehanceIcon";
+import React from "react"
+import FooterRicardoImg from "@/assets/images/FooterRicardo.png"
+import Image from "next/image"
+import { LogoR } from "../svgs/LogoR"
+import { cn } from "@/lib/utils"
+import fonts from "@/config/fonts"
+import Link from "next/link"
+import { WhatsIcon } from "../svgs/WhatsappIcon"
+import { LinkedinIcon } from "../svgs/LinkedInIcon"
+import { BehanceIcon } from "../svgs/BehanceIcon"
 
 export const Footer = () => {
   return (
     <div className="rr-section gap-y-[100px]">
-      <div className=" grid grid-cols-2 lg:grid-cols-[1fr_auto_auto] gap-y-[100px]  lg:gap-[100px]  col-span-2">
-        <div className=" max-w-fullsm:max-w-[400px] max-lg:col-span-2 flex  flex-col gap-[20px]">
-          <div className="flex items-center justify-center lg:justify-start gap-2 text-white ">
+      <div className="col-span-2 grid grid-cols-2 gap-y-[100px] lg:grid-cols-[1fr_auto_auto] lg:gap-[100px]">
+        <div className="max-w-fullsm:max-w-[400px] flex flex-col gap-[20px] max-lg:col-span-2">
+          <div className="flex items-center justify-center gap-2 text-white lg:justify-start">
             <LogoR />
             <p
               className={cn(
-                "text-2xl font-normal text-[40px] leading-[48px]   text-white ",
+                "text-2xl text-[40px] leading-[48px] font-normal text-white",
                 fonts.title.className
               )}
             >
@@ -27,12 +27,12 @@ export const Footer = () => {
           </div>
           <p
             className={cn(
-              " font-bold text-[24px] leading-normal  text-white text-center lg:text-left"
+              "text-center text-[24px] leading-normal font-bold text-white lg:text-left"
             )}
           >
             UI/UX product Designer based in Argentina
           </p>
-          <span className="text-white text-sm opacity-[0.6] text-center lg:text-left">
+          <span className="text-center text-sm text-white opacity-[0.6] lg:text-left">
             © 2025 Copyright
           </span>
         </div>
@@ -65,20 +65,20 @@ export const Footer = () => {
               icon: <WhatsIcon />,
             },
             {
-                name: "Behance",
-                href: "/behance",
-                icon: <BehanceIcon />,
+              name: "Behance",
+              href: "/behance",
+              icon: <BehanceIcon />,
             },
             {
-                name: "Linkedin",
-                href: "/linkedin",
-                icon: <LinkedinIcon />,
-            }
+              name: "Linkedin",
+              href: "/linkedin",
+              icon: <LinkedinIcon />,
+            },
           ]}
           title="Social"
         />
       </div>
-      <div className=" flex justify-center col-span-2 ">
+      <div className="col-span-2 flex justify-center">
         <Image
           src={FooterRicardoImg}
           alt="FooterRicardo"
@@ -89,33 +89,32 @@ export const Footer = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const MenuItems = ({
   options,
   title,
 }: {
-  options: { name: string; href: string; icon?: React.ReactNode }[];
-  title: string;
+  options: { name: string; href: string; icon?: React.ReactNode }[]
+  title: string
 }) => {
   return (
-    <ul className=" sm:min-w-[200px] gap-y-[20px] flex flex-col text-center lg:text-left  items-center lg:items-start ">
-      <li className="text-white text-[24px] leading-normal  font-bold ">
+    <ul className="flex flex-col items-center gap-y-[20px] text-center sm:min-w-[200px] lg:items-start lg:text-left">
+      <li className="text-[24px] leading-normal font-bold text-white">
         {title}
       </li>
-      {options.map((option) => (
+      {options.map(option => (
         <li
           key={option.name}
-          className="text-white text-sm opacity-[0.6] text-[20px] leading-normal font-light"
+          className="text-sm text-[20px] leading-normal font-light text-white opacity-[0.6]"
         >
-          <Link 
-          
-          href={option.href} className="flex items-center gap-2">
+          <Link href={option.href} className="flex items-center gap-2">
             {option.icon}
-          {option.name}</Link>
+            {option.name}
+          </Link>
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
