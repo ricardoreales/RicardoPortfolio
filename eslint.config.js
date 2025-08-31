@@ -1,12 +1,11 @@
 import js from "@eslint/js"
-import globals from "globals"
-import reactHooks from "eslint-plugin-react-hooks"
-import reactRefresh from "eslint-plugin-react-refresh"
-import tseslint from "typescript-eslint"
-import prettierPlugin from "eslint-plugin-prettier"
+import nextPlugin from "@next/eslint-plugin-next"
 import prettierConfig from "eslint-config-prettier"
 import importPlugin from "eslint-plugin-import"
-import nextPlugin from "@next/eslint-plugin-next"
+import prettierPlugin from "eslint-plugin-prettier"
+import reactHooks from "eslint-plugin-react-hooks"
+import globals from "globals"
+import tseslint from "typescript-eslint"
 export default tseslint.config([
   {
     ignores: ["dist", ".next", "node_modules"],
@@ -17,7 +16,7 @@ export default tseslint.config([
       js.configs.recommended,
       ...tseslint.configs.recommended,
       reactHooks.configs["recommended-latest"],
-      reactRefresh.configs.vite,
+
       prettierConfig,
     ],
     plugins: {
