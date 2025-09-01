@@ -1,6 +1,7 @@
 "use client"
 import { SectionTitle } from "@/components/SectionTitle"
 import type { IFeaturedProjectsSection, IProject } from "@/types"
+import { ArrowRightIcon } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
@@ -81,7 +82,7 @@ export const FeaturedProjectsSection = ({
   }, [projects.length])
 
   return (
-    <section id="gallery" className="rr-section gap-y-10">
+    <section id="gallery" className="rr-section">
       <div className="col-span-2">
         <SectionTitle
           title={featuredProjectsSection.title}
@@ -96,28 +97,28 @@ export const FeaturedProjectsSection = ({
         }}
       >
         <div className="gallery-container sticky top-0 col-span-2 h-screen">
-          <div className="relative flex h-full flex-col items-center">
+          <div className="relative flex h-full flex-col items-center pt-10">
             {/* Gallery content */}
 
             <div className="w-full overflow-hidden rounded-3xl">
               <div
                 ref={trackRef}
-                className="flex transition-none will-change-transform"
+                className="flex gap-6 transition-none will-change-transform"
                 style={{
                   width: `${projects.length * 100}%`,
                   backfaceVisibility: "hidden",
                   // perspective: '1000px'
                 }}
               >
-                {projects.map((project, index) => (
+                {projects.map(project => (
                   <div
-                    key={index}
+                    key={project.slug}
                     className="flex flex-shrink-0 items-center justify-center"
                     style={{ width: `${100 / projects.length}%` }}
                   >
                     <div className="group relative w-full">
-                      <div className="transform overflow-hidden rounded-3xl transition-all duration-700 group-hover:scale-[1.02]">
-                        <div className="relative">
+                      <div className="transform cursor-pointer overflow-hidden rounded-3xl transition-all duration-700 group-hover:scale-[1.02]">
+                        <div className="relative overflow-hidden rounded-3xl">
                           <iframe
                             src={project.main.video}
                             width="100%"
@@ -125,31 +126,46 @@ export const FeaturedProjectsSection = ({
                             allow="autoplay"
                             className="h-[80vh] w-full object-cover"
                           />
+
                           {/* Gradient overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/10"></div>
 
                           {/* Content overlay */}
-                          <div className="absolute right-0 bottom-0 left-0 p-12">
+                          <div className="pointer-events-none absolute right-0 bottom-0 left-0 p-12">
                             <div className="space-y-4">
                               <div className="bg-gold/20 inline-block rounded-full px-4 py-2 backdrop-blur-sm">
-                                <Image
-                                  src={project.logo}
-                                  alt={project.name}
-                                  className="h-[50px] w-auto object-contain"
-                                  width={100}
-                                  height={100}
-                                />
+                                <a href={`/project/${project.slug}`}>
+                                  <Image
+                                    src={project.logo}
+                                    alt={project.name}
+                                    className="pointer-events-auto h-[50px] w-auto object-contain"
+                                    width={100}
+                                    height={100}
+                                  />
+                                </a>
                               </div>
-                              <h3 className="text-4xl leading-tight font-light text-white lg:text-5xl">
-                                {project.name}
-                              </h3>
-                              <p className="max-w-md text-xl text-white/80">
+                              <a href={`/project/${project.slug}`}>
+                                <h3 className="pointer-events-auto text-4xl leading-tight font-light text-white lg:text-5xl">
+                                  {project.name}
+                                </h3>
+                              </a>
+                              <p className="pointer-events-auto max-w-md text-xl text-white/80">
                                 {project.main.description}
                               </p>
                               <div className="from-gold to-silver h-1 w-24 rounded-full bg-gradient-to-r"></div>
                             </div>
                           </div>
                         </div>
+                        <a
+                          href={`/project/${project.slug}`}
+                          target="_blank"
+                          className="group/role hover:text-primary-500 flex w-fit items-center justify-between gap-5 px-2 py-2 text-white hover:underline"
+                        >
+                          <span>{project.roles[0]}</span>{" "}
+                          <div className="flex size-[40px] items-center justify-center rounded-full bg-white p-0">
+                            <ArrowRightIcon className="text-basic-700 group-hover/role:text-primary-500 size-5" />
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
