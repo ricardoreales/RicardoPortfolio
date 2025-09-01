@@ -13,7 +13,7 @@ export interface IProject {
   slug: string // slug of the project slugify(name)
   name: string
 
-  rol: string
+  roles: string[]
   logo: string // url
   main: {
     video: string // url

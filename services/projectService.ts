@@ -1,5 +1,5 @@
 import { IProject, IProjectService } from "../types/project"
-import Mobilifarma from "@/assets/images/Mobilifarma.svg"
+import Mobilifarma from "@/assets/images/Mobilifarma-sin-bordes.svg"
 
 const slugify = (name: string) => {
   return name.toLowerCase().replaceAll(/ /g, "-")
@@ -9,7 +9,7 @@ const projectsData: IProject[] = [
     slug: slugify("mobilifarma"),
     name: "mobilifarma",
     logo: Mobilifarma.src,
-    rol: "UX/UI Design",
+    roles: ["UX/UI Design", "SME in Web Development"],
     main: {
       video:
         "https://drive.google.com/file/d/1xCHo-wppGEF1sMpkMZin6crvOhZEit7p/view",

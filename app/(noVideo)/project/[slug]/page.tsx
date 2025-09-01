@@ -2,6 +2,7 @@ import { Header } from "@/components/Header/Header"
 import { projectService } from "@/services/projectService"
 import { ProjectHeader } from "./components/ProjectHeader"
 import { notFound } from "next/navigation"
+import { SectionLayout } from "@/components/layouts/SectionLayout"
 
 export async function getStaticParams() {
   const projects = projectService.getProjects()
@@ -23,9 +24,11 @@ export default async function Project({
     return notFound()
   }
   return (
-    <div className="flex flex-col gap-4 text-white">
+    <div className="flex flex-col gap-4 pt-20 text-white">
       <Header />
-      <ProjectHeader project={project} />
+      <SectionLayout>
+        <ProjectHeader project={project} />
+      </SectionLayout>
     </div>
   )
 }

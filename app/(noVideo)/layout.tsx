@@ -11,7 +11,7 @@ export default async function RootLayout({
   return (
     <>
       <body
-        className={`${fonstsIncludes} loaded-intro bg-background antialiased`}
+        className={`${fonstsIncludes} loaded-intro bg-background antialiased ${fonts.default.className}`}
       >
         {children}
       </body>
