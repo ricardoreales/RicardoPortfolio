@@ -1,9 +1,12 @@
 import { IProject, IProjectService } from "../types/project"
 import Mobilifarma from "@/assets/images/Mobilifarma.svg"
 
+const slugify = (name: string) => {
+  return name.toLowerCase().replaceAll(/ /g, "-")
+}
 const projectsData: IProject[] = [
   {
-    id: 1,
+    slug: slugify("mobilifarma"),
     name: "mobilifarma",
     logo: Mobilifarma.src,
     rol: "UX/UI Design",
@@ -67,8 +70,8 @@ export class ProjectService implements IProjectService {
     return this.projects
   }
 
-  getProjectById(id: number): IProject | undefined {
-    return this.projects.find(project => project.id === id)
+  getProjectBySlug(slug: string): IProject | undefined {
+    return this.projects.find(project => project.slug === slug)
   }
 
   // getProjectsByCategory(category: string): IProject[] {

@@ -10,7 +10,7 @@ export interface IDesignProcess {
 }
 
 export interface IProject {
-  id: number
+  slug: string // slug of the project slugify(name)
   name: string
 
   rol: string
@@ -31,6 +31,6 @@ export interface IProject {
 
 export interface IProjectService {
   getProjects(): IProject[]
-  getProjectById(id: number): IProject | undefined
+  getProjectBySlug(slug: string): IProject | undefined
   // getProjectsByCategory(category: string): IProject[]
 }
