@@ -12,14 +12,14 @@ export const VideoIntro = () => {
         height={100}
         unoptimized
         alt=""
-        className="mx-auto h-screen w-auto object-cover object-[46.5%_0%]"
+        className="mx-auto h-[100dvh] w-auto object-cover object-[46.5%_0%]"
       />
 
       <div
         className={cn(
           "absolute top-0 right-0 bottom-0 left-0 z-10 h-full w-full",
           "max-sm:from-black/70 max-sm:to-black/70",
-          "bg-gradient-to-l from-black/100 via-transparent to-black/100",
+          "pointer-events-none bg-gradient-to-l from-black/100 via-transparent to-black/100",
           "xl:bg-gradient-to-l xl:from-black/100 xl:from-20% xl:via-transparent xl:to-black/100 xl:to-80%"
         )}
       />

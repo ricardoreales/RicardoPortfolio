@@ -262,3 +262,10 @@
 .loaded-intro .hidden-without-video {
   display: initial;
 }
+
+.while-video-event-none {
+  pointer-events: none;
+}
+.loaded-intro .while-video-event-none {
+  pointer-events: auto;
+}

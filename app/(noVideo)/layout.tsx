@@ -10,6 +10,9 @@ export default async function RootLayout({
     .join(" ")
   return (
     <>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Ricardo Realés" />
+      </head>
       <body
         className={`${fonstsIncludes} loaded-intro bg-background antialiased ${fonts.default.className}`}
       >

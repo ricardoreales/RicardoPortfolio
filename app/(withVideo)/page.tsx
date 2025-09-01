@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="relative z-0 min-h-screen overflow-x-hidden bg-[#1a1a1a] text-white">
+      <div className="relative z-0 min-h-[100dvh] overflow-x-hidden bg-[#1a1a1a] text-white">
         <Hero />
       </div>
       <div className="hidden-without-video">
