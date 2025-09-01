@@ -1,4 +1,4 @@
-import { PrimaryLink } from "../../../../components/PrimaryLink"
+import { ContactBtn } from "@/components/ContactBtn"
 
 export const PresentationText = () => {
   return (
@@ -19,14 +19,7 @@ export const PresentationText = () => {
         AI-powered design, guided by human intuition.
       </p>
 
-      <PrimaryLink
-        variant="header"
-        className="w-fit"
-        href="/#portfolio"
-        aria-label="View portfolio and start working together"
-      >
-        Let&apos;s work together
-      </PrimaryLink>
+      <ContactBtn text="Let's work together" />
     </section>
   )
 }

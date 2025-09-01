@@ -1,5 +1,5 @@
 import TheHumanImage from "@/assets/images/the-human.webp"
-import { PrimaryLink } from "@/components/PrimaryLink"
+import { ContactBtn } from "@/components/ContactBtn"
 import { SectionTitle } from "@/components/SectionTitle"
 import { LinkedinIcon } from "@/components/svgs/LinkedInIcon"
 import { WhatsIcon } from "@/components/svgs/WhatsappIcon"
@@ -42,9 +42,7 @@ export const TheHumanSection = () => {
                 href="https://wa.me/5491126677230"
               />
             </div>
-            <PrimaryLink href="/" variant="default">
-              Let&apos;s work together
-            </PrimaryLink>
+            <ContactBtn text="Let's work together" />
           </div>
         </div>
       </div>
@@ -82,12 +80,6 @@ export const TheHumanSection = () => {
           ))}
         </div>
       </div>
-
-      {/* <div className="flex flex-col gap-4 col-span-full justify-center items-center">
-        <PrimaryLink href="/" variant="default">
-          Contact me
-        </PrimaryLink>
-      </div>  */}
     </section>
   )
 }

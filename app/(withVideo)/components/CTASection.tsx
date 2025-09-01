@@ -1,7 +1,7 @@
 "use client"
 import ctaBg from "@/assets/CTASection.webp"
+import { ContactBtn } from "@/components/ContactBtn"
 import { SectionTitle } from "../../../components/SectionTitle"
-import { PrimaryLink } from "../../../components/PrimaryLink"
 export const CTASection = () => {
   return (
     <section
@@ -18,9 +18,7 @@ export const CTASection = () => {
             title="Let’s Bring Your Vision to Life"
             description="Ready to create something extraordinary? I’m eager to craft an impactful, functional product—from UX vision to polished UI hand-off."
           />
-          <PrimaryLink href="/" variant="default">
-            Contact me
-          </PrimaryLink>
+          <ContactBtn />
         </div>
       </div>
     </section>

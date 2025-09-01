@@ -1,5 +1,5 @@
 import { Card } from "@/components/Card"
-import { PrimaryLink } from "@/components/PrimaryLink"
+import { ContactBtn } from "@/components/ContactBtn"
 import { BaggageClaim, Brush, Search } from "lucide-react"
 
 export const PresentationSection = () => {
@@ -34,9 +34,7 @@ export const PresentationSection = () => {
         />
       </div>
       <div className="col-span-full flex flex-col items-center justify-center gap-4">
-        <PrimaryLink href="/" variant="default">
-          Contact me
-        </PrimaryLink>
+        <ContactBtn />
       </div>
     </section>
   )

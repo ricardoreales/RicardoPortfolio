@@ -7,7 +7,9 @@ export const Header = () => {
     <header className="fade-in animation-entrance-top fixed top-4 left-0 z-50 flex w-full items-center justify-center">
       <nav className="relative container mx-2 flex min-h-10 items-center justify-between px-3 py-3 text-white sm:mx-4 lg:mx-auto">
         <div className="nav-glass-background absolute top-0 left-0 -z-10 h-full w-full" />
-        <span className="ml-10">Ricardo</span>
+        <Link href="/" className="ml-10">
+          Ricardo
+        </Link>
         <div className="[&>a]:hover:text-primary-500 flex items-center gap-x-4 text-sm font-bold transition-all duration-300 [&>a]:hover:scale-105 [&>a]:hover:underline">
           <Link className="my-2" href="/#home">
             Home
