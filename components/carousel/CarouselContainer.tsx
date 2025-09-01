@@ -1,4 +1,4 @@
-import { EmblaViewportRefType } from "embla-carousel-react"
+import type { EmblaViewportRefType } from "embla-carousel-react"
 import { cn } from "@/lib/utils"
 
 export const CarruselContainer = ({

@@ -1,6 +1,6 @@
 import fonts from "@/config/fonts"
 import { cn } from "@/lib/utils"
-import { IMainProjectSection, IWorkDescription } from "@/types/project"
+import type { IMainProjectSection, IWorkDescription } from "@/types/project"
 import { FiCheckCircle } from "react-icons/fi"
 import { GoLightBulb } from "react-icons/go"
 import { MdWorkOutline } from "react-icons/md"

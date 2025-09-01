@@ -1,6 +1,6 @@
 import fonts from "@/config/fonts"
 import { cn } from "@/lib/utils"
-import { IProject } from "@/types/project"
+import type { IProject } from "@/types/project"
 import Image from "next/image"
 
 interface ProjectHeaderProps {
