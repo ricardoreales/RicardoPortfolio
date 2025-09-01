@@ -1,71 +1,62 @@
 import { IProject, IProjectService } from "../types/project"
+import Mobilifarma from "@/assets/images/Mobilifarma.svg"
 
 const projectsData: IProject[] = [
   {
     id: 1,
-    title: "UX Research",
-    category: "User Experience",
-    company: "Emtech Institute",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=600&fit=crop",
-    description: "Complete UX research project for fintech application",
-    tags: ["UX", "Research", "Fintech"],
-    url: "#",
-  },
-  {
-    id: 2,
-    title: "UI Design",
-    category: "Interface Design",
-    company: "Tech Solutions",
-    image:
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=600&fit=crop",
-    description: "Modern interface design for mobile application",
-    tags: ["UI", "Design", "Mobile"],
-    url: "#",
-  },
-  {
-    id: 3,
-    title: "Brand Identity",
-    category: "Visual Design",
-    company: "Creative Studio",
-    image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=600&fit=crop",
-    description: "Complete brand identity and visual system",
-    tags: ["Branding", "Identity", "Visual"],
-    url: "#",
-  },
-  {
-    id: 4,
-    title: "Web Development",
-    category: "Development",
-    company: "Digital Agency",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=600&fit=crop",
-    description: "Full-stack web application development",
-    tags: ["Web", "Development", "Full-stack"],
-    url: "#",
-  },
-  {
-    id: 5,
-    title: "Mobile App",
-    category: "App Development",
-    company: "Startup Inc",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=600&fit=crop",
-    description: "Native mobile application for iOS and Android",
-    tags: ["Mobile", "App", "React Native"],
-    url: "#",
-  },
-  {
-    id: 6,
-    title: "Data Analysis",
-    category: "Analytics",
-    company: "Data Corp",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=600&fit=crop",
-    description: "Advanced data analytics and visualization",
-    tags: ["Data", "Analytics", "Visualization"],
-    url: "#",
+    name: "mobilifarma",
+    logo: Mobilifarma.src,
+    rol: "UX/UI Design",
+    main: {
+      video:
+        "https://drive.google.com/file/d/1xCHo-wppGEF1sMpkMZin6crvOhZEit7p/view",
+      title: "Mobilifarma - Argentina",
+      description:
+        "Mobilifarma is a company specializing in equipment and solutions for pharmacies.",
+    },
+    workDescription: {
+      challenge:
+        "The old website had multiple issues: it was visually outdated, navigation was unclear, and there were no call-to-action buttons to drive users toward contact or sales. The image gallery was weak and failed to highlight Mobilifarma’s expertise and products. There was no integration with social media and no clear explanation of the company’s services or workflow. These issues led to a very low conversion rate and a weak digital brand identity.",
+      solution:
+        "The proposed redesign aimed to create a modern, accessible, and responsive website focused on user experience and business goals. The new interface includes strategic call-to-action buttons, a clear narrative about the work process, and a strong visual portfolio. Social media links were added, and the content was completely restructured for clarity and ease of navigation. The redesign communicates Mobilifarma’s value clearly and encourages engagement from users.",
+    },
+    projectImages: [
+      "https://drive.google.com/file/d/1e6ufzTSpEtn9b2VrsraK_0XdxFp_4nT9/view?usp=sharing",
+      "https://drive.google.com/file/d/1V72Kb6e6wFEUoSGJBQ9Zoy8KXsY4md9b/view?usp=drive_link",
+    ],
+    links: {
+      behance: "https://www.behance.net/gallery/1234567890/mobilifarma",
+      project: "https://www.mobilifarma.com",
+    },
+    designProcess: [
+      {
+        title: "DISCOVERY",
+        solutions: [
+          "UX audit of the old website.",
+          "Competitor benchmarking.",
+          "Client interviews to define goals.",
+        ],
+        icon: "SEARCH",
+      },
+      {
+        title: "DESIGN",
+        solutions: [
+          "Wireframes and mock-ups.",
+          "High-fidelity prototypes.",
+          "Visual identity design.",
+        ],
+        icon: "PIECE",
+      },
+      {
+        title: "DEVELOPMENT",
+        solutions: [
+          "Website development.",
+          "Integration with CMS.",
+          "Testing and optimization.",
+        ],
+        icon: "THEME_PALETTE",
+      },
+    ],
   },
 ]
 
@@ -80,11 +71,11 @@ export class ProjectService implements IProjectService {
     return this.projects.find(project => project.id === id)
   }
 
-  getProjectsByCategory(category: string): IProject[] {
-    return this.projects.filter(project =>
-      project.category.toLowerCase().includes(category.toLowerCase())
-    )
-  }
+  // getProjectsByCategory(category: string): IProject[] {
+  //   return this.projects.filter(project =>
+  //     project.category.toLowerCase().includes(category.toLowerCase())
+  //   )
+  // }
 
   getFeaturedProjects(limit: number = 6): IProject[] {
     return this.projects.slice(0, limit)
