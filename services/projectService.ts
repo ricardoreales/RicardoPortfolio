@@ -1,5 +1,7 @@
-import { IProject, IProjectService } from "../types/project"
+import type { IProject, IProjectService } from "../types/project"
 import Mobilifarma from "@/assets/images/Mobilifarma-sin-bordes.svg"
+import MobiliFarmaMockup from "@/assets/images/project-mockups/MobilifarmaMockups.jpg"
+import ImpulsaEmtech from "@/assets/images/project-mockups/ImpulsaEmtech.jpg"
 
 const slugify = (name: string) => {
   return name.toLowerCase().replaceAll(/ /g, "-")
@@ -24,8 +26,9 @@ const projectsData: IProject[] = [
         "The proposed redesign aimed to create a modern, accessible, and responsive website focused on user experience and business goals. The new interface includes strategic call-to-action buttons, a clear narrative about the work process, and a strong visual portfolio. Social media links were added, and the content was completely restructured for clarity and ease of navigation. The redesign communicates Mobilifarma’s value clearly and encourages engagement from users.",
     },
     projectImages: [
-      "https://drive.google.com/file/d/1e6ufzTSpEtn9b2VrsraK_0XdxFp_4nT9/view?usp=sharing",
-      "https://drive.google.com/file/d/1V72Kb6e6wFEUoSGJBQ9Zoy8KXsY4md9b/view?usp=drive_link",
+      MobiliFarmaMockup.src,
+      ImpulsaEmtech.src,
+      MobiliFarmaMockup.src,
     ],
     links: {
       behance: "https://www.behance.net/gallery/1234567890/mobilifarma",

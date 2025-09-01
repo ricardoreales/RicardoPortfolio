@@ -8,9 +8,10 @@ export interface IWorkDescription {
   solution: string
 }
 
+export type IDesignProcessIconType = "SEARCH" | "PIECE" | "THEME_PALETTE"
 export interface IDesignProcess {
   title: string
-  icon: "SEARCH" | "PIECE" | "THEME_PALETTE"
+  icon: IDesignProcessIconType
   solutions: string[]
 }
 

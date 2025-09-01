@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import { ArrowRightIcon } from "lucide-react"
-import Link, { LinkProps } from "next/link"
+import Link, { type LinkProps } from "next/link"
 import React from "react"
 
 interface PrimarybuttonProps extends LinkProps {

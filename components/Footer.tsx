@@ -1,13 +1,13 @@
 import React from "react"
 import FooterRicardoImg from "@/assets/images/FooterRicardo.png"
 import Image from "next/image"
-import { LogoR } from "../../../components/svgs/LogoR"
+import { LogoR } from "./svgs/LogoR"
 import { cn } from "@/lib/utils"
 import fonts from "@/config/fonts"
 import Link from "next/link"
-import { WhatsIcon } from "../../../components/svgs/WhatsappIcon"
-import { LinkedinIcon } from "../../../components/svgs/LinkedInIcon"
-import { BehanceIcon } from "../../../components/svgs/BehanceIcon"
+import { WhatsIcon } from "./svgs/WhatsappIcon"
+import { LinkedinIcon } from "./svgs/LinkedInIcon"
+import { BehanceIcon } from "./svgs/BehanceIcon"
 
 export const Footer = () => {
   return (

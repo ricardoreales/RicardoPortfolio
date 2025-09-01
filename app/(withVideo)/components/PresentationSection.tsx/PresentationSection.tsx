@@ -1,7 +1,6 @@
+import { Card } from "@/components/Card"
 import { PrimaryLink } from "@/components/PrimaryLink"
-import fonts from "@/config/fonts"
-import { cn } from "@/lib/utils"
-import { BaggageClaim, Brush, LucideIcon, Search } from "lucide-react"
+import { BaggageClaim, Brush, Search } from "lucide-react"
 
 export const PresentationSection = () => {
   return (
@@ -40,36 +39,5 @@ export const PresentationSection = () => {
         </PrimaryLink>
       </div>
     </section>
-  )
-}
-
-interface CardProps {
-  Icon: LucideIcon
-  title: string
-  description: string
-  className?: string
-}
-
-const Card = ({ title, description, Icon, className }: CardProps) => {
-  return (
-    <div
-      className={cn(
-        "flex h-full min-h-[400px] flex-col gap-[10px] rounded-[20px] bg-[#292929] p-8",
-        className
-      )}
-    >
-      <div className="flex-1">
-        <Icon className="text-primary-500 h-[70px] w-[70px]" />
-      </div>
-      <h5
-        className={cn(
-          "text-[32px] leading-none font-semibold text-white",
-          fonts.skills
-        )}
-      >
-        {title}
-      </h5>
-      <p className="text-[18px] text-white opacity-60">{description}</p>
-    </div>
   )
 }

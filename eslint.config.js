@@ -69,6 +69,7 @@ export default tseslint.config([
       "@next/next/google-font-preconnect": "warn",
       "@next/next/next-script-for-ga": "warn",
       "@next/next/inline-script-id": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
       // 'import/extensions': [
       //   'error',
       //   'ignorePackages',

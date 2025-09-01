@@ -6,7 +6,7 @@ import { TechnologiesCarrusel } from "@/app/(withVideo)/components/TechnologiesC
 import { TheHumanSection } from "@/app/(withVideo)/components/PresentationSection.tsx/TheHumanSection"
 import { FeaturedProjectsSection } from "@/app/(withVideo)/components/FeaturedProjectsSection"
 import { CTASection } from "@/app/(withVideo)/components/CTASection"
-import { Footer } from "@/app/(withVideo)/components/Footer"
+import { Footer } from "@/components/Footer"
 
 export function getStaticParams() {
   return { withVideo: true }
