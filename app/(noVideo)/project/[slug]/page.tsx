@@ -11,7 +11,7 @@ import { MainProjectSection } from "./components/MainProjectSection"
 import { ProjectHeader } from "./components/ProjectHeader"
 import { ProjectImageCarrusel } from "./components/ProjectImageCarrusel"
 
-export async function getStaticParams() {
+export async function generateStaticParams() {
   const projects = projectService.getProjects()
 
   return projects.map(project => ({

@@ -8,9 +8,6 @@ import { FeaturedProjectsSection } from "@/app/(withVideo)/components/FeaturedPr
 import { CTASection } from "@/app/(withVideo)/components/CTASection"
 import { Footer } from "@/components/Footer"
 
-export function getStaticParams() {
-  return { withVideo: true }
-}
 export default function Home() {
   return (
     <>
