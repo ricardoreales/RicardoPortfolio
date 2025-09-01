@@ -7,8 +7,12 @@ import { TheHumanSection } from "@/app/(withVideo)/components/PresentationSectio
 import { FeaturedProjectsSection } from "@/app/(withVideo)/components/FeaturedProjectsSection"
 import { CTASection } from "@/app/(withVideo)/components/CTASection"
 import { Footer } from "@/components/Footer"
+import { mainService } from "@/services/main.service"
+import { projectService } from "@/services/projectService"
 
 export default function Home() {
+  const main = mainService.getMain()
+  const projects = projectService.getProjects()
   return (
     <>
       <Header />
@@ -18,13 +22,16 @@ export default function Home() {
       <div className="hidden-without-video">
         <CollaboratorsCarrusel />
 
-        <PresentationSection />
+        <PresentationSection {...main.presentationSection} />
 
         <TheHumanSection />
 
         <TechnologiesCarrusel />
 
-        <FeaturedProjectsSection />
+        <FeaturedProjectsSection
+          projects={projects}
+          featuredProjectsSection={main.featuredProjectsSection}
+        />
         <CTASection />
         <Footer />
       </div>

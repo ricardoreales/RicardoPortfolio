@@ -1,35 +1,19 @@
 "use client"
 import { SectionTitle } from "@/components/SectionTitle"
+import type { IFeaturedProjectsSection, IProject } from "@/types"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
-export const FeaturedProjectsSection = () => {
+export const FeaturedProjectsSection = ({
+  projects,
+  featuredProjectsSection,
+}: {
+  projects: IProject[]
+  featuredProjectsSection: IFeaturedProjectsSection
+}) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
-
-  const images = [
-    {
-      src: "https://i.blogs.es/8256d5/gpu-openai-chatgpt/500_333.jpeg",
-      title: "Arquitectura Moderna",
-      subtitle: "Diseño contemporáneo y funcional",
-    },
-    {
-      src: "https://i.blogs.es/8256d5/gpu-openai-chatgpt/500_333.jpeg",
-      title: "Diseño de Producto",
-      subtitle: "Elegancia en cada detalle",
-    },
-    {
-      src: "https://i.blogs.es/8256d5/gpu-openai-chatgpt/500_333.jpeg",
-      title: "Espacios Interiores",
-      subtitle: "Ambientes que inspiran",
-    },
-    {
-      src: "https://i.blogs.es/8256d5/gpu-openai-chatgpt/500_333.jpeg",
-      title: "Arte Digital",
-      subtitle: "Creatividad sin límites",
-    },
-  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,8 +48,8 @@ export const FeaturedProjectsSection = () => {
         // Calculate translation based on track width and image positioning
         // Each image takes (100 / images.length)% of the track width
         // To show all images, we need to translate (images.length - 1) * (100 / images.length)%
-        const imageWidthPercentage = 100 / images.length
-        const maxTranslate = (images.length - 1) * imageWidthPercentage
+        const imageWidthPercentage = 100 / projects.length
+        const maxTranslate = (projects.length - 1) * imageWidthPercentage
         const translateX = easeProgress * maxTranslate
 
         // Apply transformation with GPU acceleration
@@ -75,7 +59,7 @@ export const FeaturedProjectsSection = () => {
         // Calculate based on the actual translation percentage relative to image width
         const currentImageIndex = Math.round(translateX / imageWidthPercentage)
         setCurrentIndex(
-          Math.max(0, Math.min(images.length - 1, currentImageIndex))
+          Math.max(0, Math.min(projects.length - 1, currentImageIndex))
         )
       }
     }
@@ -94,54 +78,52 @@ export const FeaturedProjectsSection = () => {
 
     window.addEventListener("scroll", smoothScroll, { passive: true })
     return () => window.removeEventListener("scroll", smoothScroll)
-  }, [images.length])
+  }, [projects.length])
 
   return (
-    <section id="gallery" className="rr-section">
-      <div className="">
-        {" "}
+    <section id="gallery" className="rr-section gap-y-10">
+      <div className="col-span-2">
         <SectionTitle
-          title="The Human Behind the Screen"
-          description="I'm Ricardo Reales, a passionate UX/UI Designer based in Argentina. I craft intuitive and visually engaging digital experiences by blending research-driven design with a strong visual language."
+          title={featuredProjectsSection.title}
+          description={featuredProjectsSection.description}
         />
       </div>
       <div
         ref={containerRef}
         className="col-span-2"
         style={{
-          height: `calc(${images.length * 100}vh + 100px)`,
+          height: `calc(${projects.length * 100}vh + 100px)`,
         }}
       >
         <div className="gallery-container sticky top-0 col-span-2 h-screen">
-          <div className="relative flex h-full items-center">
+          <div className="relative flex h-full flex-col items-center">
             {/* Gallery content */}
 
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden rounded-3xl">
               <div
                 ref={trackRef}
-                className="flex transition-none will-change-transform [&>div]:px-6"
+                className="flex transition-none will-change-transform"
                 style={{
-                  width: `${images.length * 100}%`,
+                  width: `${projects.length * 100}%`,
                   backfaceVisibility: "hidden",
                   // perspective: '1000px'
                 }}
               >
-                {images.map((image, index) => (
+                {projects.map((project, index) => (
                   <div
                     key={index}
                     className="flex flex-shrink-0 items-center justify-center"
-                    style={{ width: `${100 / images.length}%` }}
+                    style={{ width: `${100 / projects.length}%` }}
                   >
                     <div className="group relative w-full">
                       <div className="transform overflow-hidden rounded-3xl transition-all duration-700 group-hover:scale-[1.02]">
                         <div className="relative">
-                          <Image
-                            src={image.src}
-                            alt={image.title}
+                          <iframe
+                            src={project.main.video}
+                            width="100%"
+                            height="100%"
+                            allow="autoplay"
                             className="h-[80vh] w-full object-cover"
-                            width={100}
-                            height={100}
-                            unoptimized
                           />
                           {/* Gradient overlay */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -150,15 +132,19 @@ export const FeaturedProjectsSection = () => {
                           <div className="absolute right-0 bottom-0 left-0 p-12">
                             <div className="space-y-4">
                               <div className="bg-gold/20 inline-block rounded-full px-4 py-2 backdrop-blur-sm">
-                                <span className="text-gold text-sm font-medium">
-                                  Proyecto {String(index + 1).padStart(2, "0")}
-                                </span>
+                                <Image
+                                  src={project.logo}
+                                  alt={project.name}
+                                  className="h-[50px] w-auto object-contain"
+                                  width={100}
+                                  height={100}
+                                />
                               </div>
                               <h3 className="text-4xl leading-tight font-light text-white lg:text-5xl">
-                                {image.title}
+                                {project.name}
                               </h3>
                               <p className="max-w-md text-xl text-white/80">
-                                {image.subtitle}
+                                {project.main.description}
                               </p>
                               <div className="from-gold to-silver h-1 w-24 rounded-full bg-gradient-to-r"></div>
                             </div>
@@ -172,9 +158,9 @@ export const FeaturedProjectsSection = () => {
             </div>
 
             {/* Enhanced progress indicator */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 transform">
-              <div className="flex items-center space-x-3 rounded-full bg-black/20 px-6 py-3 backdrop-blur-sm">
-                {images.map((_, index) => (
+            <div className="transform">
+              <div className="mt-4 flex items-center space-x-3 rounded-full bg-black/20 px-6 py-3 backdrop-blur-sm">
+                {projects.map((_, index) => (
                   <div
                     key={index}
                     className={`rounded-full transition-all duration-500 ${

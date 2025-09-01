@@ -1,3 +1,18 @@
+export interface IPresententioSkill {
+  title: string
+  description: string
+  icon: "search" | "brush" | "baggage-claim"
+}
+export interface IPresentationSection {
+  title: string
+  description: string
+  skills: IPresententioSkill[]
+}
+
+export interface IFeaturedProjectsSection {
+  title: string
+  description: string
+}
 export interface IExperience {
   id: number
   title: string
@@ -7,6 +22,8 @@ export interface IExperience {
   toYear: number
 }
 export interface IMain {
+  presentationSection: IPresentationSection
+  featuredProjectsSection: IFeaturedProjectsSection
   humanSection: {
     image: string
     title: string
