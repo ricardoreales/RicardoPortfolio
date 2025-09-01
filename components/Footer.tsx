@@ -11,7 +11,7 @@ import { BehanceIcon } from "./svgs/BehanceIcon"
 
 export const Footer = () => {
   return (
-    <div className="rr-section gap-y-[100px]">
+    <footer className="rr-section gap-y-[100px]">
       <div className="col-span-2 grid grid-cols-2 gap-y-[100px] lg:grid-cols-[1fr_auto_auto] lg:gap-[100px]">
         <div className="max-w-fullsm:max-w-[400px] flex flex-col gap-[20px] max-lg:col-span-2">
           <div className="flex items-center justify-center gap-2 text-white lg:justify-start">
@@ -88,7 +88,7 @@ export const Footer = () => {
           unoptimized
         />
       </div>
-    </div>
+    </footer>
   )
 }
 

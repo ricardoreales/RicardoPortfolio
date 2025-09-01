@@ -35,9 +35,9 @@ export default async function Project({
     return notFound()
   }
   return (
-    <div className="flex flex-col gap-4 pt-20 text-white">
+    <div className="flex flex-col gap-4 text-white">
       <Header />
-      <SectionLayout>
+      <SectionLayout className="!pt-[100px]">
         <ProjectHeader {...project} />
         <MainProjectSection
           mainData={project.main}
