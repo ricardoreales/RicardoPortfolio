@@ -14,7 +14,7 @@ export const TheHumanSection = () => {
   const experiences = main.experiences
   const contact = config.contact
   return (
-    <section className="rr-section grid gap-10 md:grid-cols-2 xl:grid-cols-5">
+    <section className="rr-section flex flex-col-reverse gap-10 md:grid md:grid-cols-2 xl:grid-cols-5">
       <div className="flex flex-col items-center lg:items-end xl:col-span-2">
         <div className="flex flex-col gap-5">
           <Image
