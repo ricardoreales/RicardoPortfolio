@@ -1,47 +1,40 @@
-import TheHumanImage from "@/assets/images/the-human.webp"
 import { ContactBtn } from "@/components/ContactBtn"
 import { SectionTitle } from "@/components/SectionTitle"
 import { LinkedinIcon } from "@/components/svgs/LinkedInIcon"
 import { WhatsIcon } from "@/components/svgs/WhatsappIcon"
+import { configService } from "@/services/config.service"
+import { mainService } from "@/services/main.service"
 import Image from "next/image"
 import { Fragment } from "react"
 
-const habilities = ["Produc Designer", "UX Designer", "UI Designer"]
-const experiences = Array.from({ length: 4 }, (_, index) => ({
-  id: index + 1,
-  title: "UX/UI Designer",
-  mode: "Freelance",
-  Country: "Argentina",
-  fromYear: 2021,
-  toYear: 2022,
-}))
 export const TheHumanSection = () => {
+  const main = mainService.getMain()
+  const config = configService.getConfig()
+  const habilities = main.habilities
+  const experiences = main.experiences
+  const contact = config.contact
   return (
     <section className="rr-section grid gap-10 md:grid-cols-2 xl:grid-cols-5">
       <div className="flex flex-col items-center lg:items-end xl:col-span-2">
         <div className="flex flex-col gap-5">
           <Image
-            src={TheHumanImage}
+            src={main.humanSection.image}
             alt="The Human"
+            width={500}
+            height={500}
             className="h-full w-auto rounded-[1.25rem] object-contain"
             //     max-h-[max(70vh,400px)]
           />
           <div className="flex flex-col gap-10">
             <div className="flex items-center gap-x-10 max-md:justify-center">
-              <SocialButton
-                icon={<WhatsIcon />}
-                href="https://wa.me/5491126677230"
-              />
+              <SocialButton icon={<WhatsIcon />} href={contact.whatsappLink} />
               <div className="h-6 w-[1px] bg-white/30"></div>
               <SocialButton
                 icon={<LinkedinIcon />}
-                href="https://www.linkedin.com/in/ricardoreales"
+                href={contact.linkedinLink}
               />
               <div className="h-6 w-[1px] bg-white/30"></div>
-              <SocialButton
-                icon={<WhatsIcon />}
-                href="https://wa.me/5491126677230"
-              />
+              <SocialButton icon={<WhatsIcon />} href={contact.whatsappLink} />
             </div>
             <ContactBtn
               text="Let's work together"
@@ -53,8 +46,8 @@ export const TheHumanSection = () => {
 
       <div className="flex flex-col xl:col-span-3">
         <SectionTitle
-          title="The Human Behind the Screen"
-          description="I'm Ricardo Reales, a passionate UX/UI Designer based in Argentina. I craft intuitive and visually engaging digital experiences by blending research-driven design with a strong visual language."
+          title={main.humanSection.title}
+          description={main.humanSection.description}
         />
         <div className="my-10 flex justify-between border-y border-white/30 py-10 text-[20px] leading-normal font-[300] text-white/50">
           {habilities.map(hability => (

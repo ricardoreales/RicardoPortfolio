@@ -15,7 +15,7 @@ export default function Home() {
       <div className="relative z-0 min-h-screen overflow-x-hidden bg-[#1a1a1a] text-white">
         <Hero />
       </div>
-      <div className="bg-basic-700">
+      <div className="hidden-without-video">
         <CollaboratorsCarrusel />
 
         <PresentationSection />
