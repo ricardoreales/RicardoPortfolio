@@ -6,7 +6,7 @@ import type { IconType } from "react-icons"
 interface CardProps {
   Icon: LucideIcon | IconType
   title: string
-  description: string
+  description: string | React.ReactNode
   className?: string
 }
 
@@ -29,7 +29,11 @@ export const Card = ({ title, description, Icon, className }: CardProps) => {
       >
         {title}
       </h5>
-      <p className="text-[18px] text-white opacity-60">{description}</p>
+      {typeof description === "string" ? (
+        <p className="text-[18px] text-white opacity-60">{description}</p>
+      ) : (
+        <div className="text-[18px] text-white opacity-60">{description}</div>
+      )}
     </div>
   )
 }

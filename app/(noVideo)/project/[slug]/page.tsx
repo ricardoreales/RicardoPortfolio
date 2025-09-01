@@ -53,8 +53,14 @@ export default async function Project({
             <Card
               key={process.title}
               Icon={iconsMap[process.icon] || Search}
-              title="Discover & Research"
-              description="User needs, market trends, and business goals are analyzed to establish a solid foundation."
+              title={process.title}
+              description={
+                <ul>
+                  {process.solutions.map(solution => (
+                    <li key={solution}>-{solution}</li>
+                  ))}
+                </ul>
+              }
             />
           ))}
         </div>

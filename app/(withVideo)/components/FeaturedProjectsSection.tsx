@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/SectionTitle"
 import type { IFeaturedProjectsSection, IProject } from "@/types"
 import { ArrowRightIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 export const FeaturedProjectsSection = ({
@@ -156,16 +157,15 @@ export const FeaturedProjectsSection = ({
                             </div>
                           </div>
                         </div>
-                        <a
+                        <Link
                           href={`/project/${project.slug}`}
-                          target="_blank"
                           className="group/role hover:text-primary-500 flex w-fit items-center justify-between gap-5 px-2 py-2 text-white hover:underline"
                         >
                           <span>{project.roles[0]}</span>{" "}
                           <div className="flex size-[40px] items-center justify-center rounded-full bg-white p-0">
                             <ArrowRightIcon className="text-basic-700 group-hover/role:text-primary-500 size-5" />
                           </div>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

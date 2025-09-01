@@ -104,7 +104,7 @@ export const ProjectImageCarrusel = ({
               <div className="flex w-full flex-col overflow-hidden rounded-3xl">
                 <div
                   ref={trackRef}
-                  className="flex transition-none will-change-transform [&>div]:px-6"
+                  className="flex gap-x-6 transition-none will-change-transform"
                   style={{
                     width: `${images.length * 100}%`,
                     backfaceVisibility: "hidden",
