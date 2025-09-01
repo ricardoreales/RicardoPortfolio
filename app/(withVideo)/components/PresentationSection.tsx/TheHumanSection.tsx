@@ -17,16 +17,17 @@ const experiences = Array.from({ length: 4 }, (_, index) => ({
 }))
 export const TheHumanSection = () => {
   return (
-    <section className="rr-section gap-10">
-      <div className="flex flex-col items-center lg:items-end">
+    <section className="rr-section grid gap-10 md:grid-cols-2 xl:grid-cols-5">
+      <div className="flex flex-col items-center lg:items-end xl:col-span-2">
         <div className="flex flex-col gap-5">
           <Image
             src={TheHumanImage}
             alt="The Human"
-            className="h-full max-h-[max(70vh,400px)] w-auto rounded-[1.25rem] object-contain"
+            className="h-full w-auto rounded-[1.25rem] object-contain"
+            //     max-h-[max(70vh,400px)]
           />
           <div className="flex flex-col gap-10">
-            <div className="flex items-center gap-x-10">
+            <div className="flex items-center gap-x-10 max-md:justify-center">
               <SocialButton
                 icon={<WhatsIcon />}
                 href="https://wa.me/5491126677230"
@@ -42,12 +43,15 @@ export const TheHumanSection = () => {
                 href="https://wa.me/5491126677230"
               />
             </div>
-            <ContactBtn text="Let's work together" />
+            <ContactBtn
+              text="Let's work together"
+              className="w-full md:w-fit"
+            />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col xl:col-span-3">
         <SectionTitle
           title="The Human Behind the Screen"
           description="I'm Ricardo Reales, a passionate UX/UI Designer based in Argentina. I craft intuitive and visually engaging digital experiences by blending research-driven design with a strong visual language."

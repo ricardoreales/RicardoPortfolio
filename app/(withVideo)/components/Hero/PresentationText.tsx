@@ -2,7 +2,7 @@ import { ContactBtn } from "@/components/ContactBtn"
 
 export const PresentationText = () => {
   return (
-    <section className="flex w-min flex-col items-center max-lg:gap-4 lg:items-start">
+    <section className="flex w-full flex-col items-center max-lg:gap-4 lg:items-start">
       <h1 className="flex flex-col items-center lg:items-start">
         <span className="mb-2 text-3xl text-nowrap italic md:pl-1 xl:mb-8 xl:text-5xl">
           Hey. I&apos;m Ricardo,{" "}
