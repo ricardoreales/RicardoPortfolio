@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 const figtree = Figtree({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-skills",
 })
 
@@ -28,6 +28,7 @@ const fonts = {
   title: kalnia,
   default: poppins,
   skills: figtree,
+  figtree: figtree,
   sectionTitle,
 } satisfies Record<string, NextFontWithVariable>
 

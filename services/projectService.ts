@@ -12,7 +12,7 @@ const projectsData: IProject[] = [
     roles: ["UX/UI Design", "SME in Web Development"],
     main: {
       video:
-        "https://drive.google.com/file/d/1xCHo-wppGEF1sMpkMZin6crvOhZEit7p/view",
+        "https://drive.google.com/file/d/1xCHo-wppGEF1sMpkMZin6crvOhZEit7p/preview",
       title: "Mobilifarma - Argentina",
       description:
         "Mobilifarma is a company specializing in equipment and solutions for pharmacies.",

@@ -3,13 +3,17 @@ import { cn } from "@/lib/utils"
 import { IProject } from "@/types/project"
 import Image from "next/image"
 
-export const ProjectHeader = ({ project }: { project: IProject }) => {
-  const { roles } = project
+interface ProjectHeaderProps {
+  roles: IProject["roles"]
+  logo: IProject["logo"]
+  name: IProject["name"]
+}
+export const ProjectHeader = ({ roles, logo, name }: ProjectHeaderProps) => {
   return (
     <div className="flex w-full flex-col items-start">
       <Image
-        src={project.logo}
-        alt="Project Header"
+        src={logo}
+        alt={name}
         className="h-[50px] w-auto object-contain"
         width={1000}
         height={1000}
@@ -18,7 +22,7 @@ export const ProjectHeader = ({ project }: { project: IProject }) => {
         <div
           className={cn(
             "py-10 text-[20px] leading-normal font-bold text-white/20 uppercase md:text-[32px]",
-            fonts.sectionTitle.className
+            fonts.figtree.className
           )}
         >
           <h3>{`${roles.length === 1 ? "Rol:" : "Roles:"}`}</h3>

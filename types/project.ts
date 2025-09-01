@@ -1,3 +1,8 @@
+export interface IMainProjectSection {
+  video: string // url
+  title: string
+  description: string
+}
 export interface IWorkDescription {
   challenge: string
   solution: string
@@ -15,11 +20,7 @@ export interface IProject {
 
   roles: string[]
   logo: string // url
-  main: {
-    video: string // url
-    title: string
-    description: string
-  }
+  main: IMainProjectSection
   workDescription: IWorkDescription
   designProcess: IDesignProcess[]
   projectImages: string[] // urls
