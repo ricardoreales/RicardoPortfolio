@@ -1,10 +1,10 @@
+import { cn } from "@/lib/utils"
 import React from "react"
 
-export const LogoR = () => {
+export const LogoR = ({ className }: { className?: string }) => {
   return (
     <svg
-      width="112"
-      height="112"
+      className={cn("h-[112px] w-[112px]", className)}
       viewBox="0 0 112 112"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
