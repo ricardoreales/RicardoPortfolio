@@ -125,7 +125,7 @@ const projectsData: IProject[] = [
     slug: slugify("mobilifarma2"),
     name: "mobilifarma",
     logo: Mobilifarma.src,
-    roles: ["UX/UI Design", "SME in Web Development"],
+    roles: ["UX/UI Design"],
     main: {
       video:
         "https://drive.google.com/file/d/1xCHo-wppGEF1sMpkMZin6crvOhZEit7p/preview",
