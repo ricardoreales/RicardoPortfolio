@@ -1,5 +1,6 @@
 export interface IPresententioSkill {
   title: string
+  keywords: string[]
   description: string
   icon: "search" | "brush" | "baggage-claim"
 }

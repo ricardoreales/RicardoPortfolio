@@ -8,9 +8,9 @@ export function Hero() {
     <main className="relative flex min-h-[100dvh] justify-between">
       <VideoIntro />
       <div className="hero-content while-video-event-none absolute top-0 right-0 bottom-0 left-0 z-20 flex min-h-[100dvh] w-full items-center justify-between overflow-hidden">
-        <SectionLayout>
+        <SectionLayout className="mt-20">
           <div className="container mx-auto flex w-full flex-col items-center md:justify-between md:max-lg:gap-y-8 lg:flex-row">
-            <div className="animation-entrance-left">
+            <div className="animation-entrance-left mt-10">
               <PresentationText />
               <div className="h-20"></div>
             </div>

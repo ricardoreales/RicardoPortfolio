@@ -11,14 +11,16 @@ const mainData = {
       {
         title: "Discover & Research",
         description:
-          "User needs, market trends, and business goals are analyzed to establish a solid foundation.",
+          "I design intuitive, user-centered digital experiences that enhance engagement and bring brands to life online.",
         icon: "search",
+        keywords: ["Discover", "Research"],
       },
       {
         title: "Design & Prototype",
         description:
           "Intuitive interfaces and visual identities are shaped through wireframes, mock-ups, and high-fidelity prototypes.",
         icon: "brush",
+        keywords: ["Design", "Prototype"],
       },
       {
         title: "Refine & Deliver",
